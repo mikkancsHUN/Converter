@@ -3,9 +3,12 @@
   font-weight: 400;
 
   --clr-background: linear-gradient(90deg, #0f0f0f, #232d3f);
+  --clr-card: rgba(0, 0, 0, 0.3);
   --clr-text: white;
   --clr-inputfield: #00302d;
+  --clr-inputfield-hover: #00524b;
   --clr-span: #008170;
+  --clr-span-hover: #00463c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,6 +33,15 @@ h2 {
   font-weight: 600;
 }
 
+.card {
+  background-color: var(--clr-card);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  color: var(--clr-text);
+}
+
 span {
   color: var(--clr-span);
 }
@@ -48,7 +60,7 @@ input {
 }
 
 input:hover {
-  background-color: #00524b;
+  background-color: var(--clr-inputfield-hover);
 }
 
 button {
@@ -62,12 +74,12 @@ button {
   height: 3.4rem;
   border: 2px solid black;
   box-shadow: 0 8px rgb(14, 10, 31);
-  /*-webkit-*/
+  user-select: none;
   transition-duration: 0.1s;
 }
 
 button:hover {
-  background-color: #00463c;
+  background-color: var(--clr-span-hover);
 }
 
 button:active {

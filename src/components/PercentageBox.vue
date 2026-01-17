@@ -5,7 +5,7 @@
         </header>
 
         <p class="task-info">
-            Calculating the part using a whole number and its percent:
+            Calculate part from percentage and whole number:
         </p>
         <div class="percentage__box-item border-bot">
             <input v-model.number="percent" type="number" placeholder="(%)" />
@@ -13,11 +13,11 @@
             <input v-model.number="whole" type="number" placeholder="(whole number)" />
             =
             <span class="output">{{ partResult ?? "" }}</span>
-            <button @click="calculatePart">Convert</button>
+            <button @click="calculatePart">Calculate</button>
         </div>
 
         <p class="task-info">
-            Calculating the percent using a whole number and its part:
+            Calculate percent from part and whole number:
         </p>
         <div class="percentage__box-item border-bot">
             <input v-model.number="part" type="number" placeholder="(part)" />
@@ -25,11 +25,11 @@
             <input v-model.number="whole2" type="number" placeholder="(whole number)" />
             =
             <span class="output">{{ percentResult ?? "" }}</span>
-            <button @click="calculatePercent">Convert</button>
+            <button @click="calculatePercent">Calculate</button>
         </div>
 
         <p class="task-info">
-            Calculating the whole number using a part as a percent of it:
+            Calculate whole number from part and percent:
         </p>
         <div class="percentage__box-item border-top">
             <input v-model.number="part2" type="number" placeholder="(part)" />
@@ -37,7 +37,7 @@
             <input v-model.number="percent2" type="number" placeholder="(%)" />
             of =
             <span class="output">{{ wholeResult ?? "" }}</span>
-            <button @click="calculateWhole">Convert</button>
+            <button @click="calculateWhole">Calculate</button>
         </div>
         <button class="clear-btn" @click="clearAll">Clear</button>
     </div>
@@ -117,26 +117,24 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.percentage__box {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: fit-content;
-    color: var(--clr-text);
-}
-
 .percentage__box-item {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.clear-btn {
-    margin: auto;
-    display: block;
-    width: 14rem;
-    box-shadow: rgb(14, 10, 31) 0px 7.1166px 0px 0px;
+.task-info {
+    margin: 1rem 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+.task-info::before {
+    content: '•';
+    color: var(--clr-span);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 .output {
@@ -151,5 +149,13 @@ export default defineComponent({
     background-color: var(--clr-inputfield);
     color: var(--clr-text);
     outline: none;
+}
+
+.clear-btn {
+    margin: auto;
+    margin-top: 1rem;
+    display: block;
+    width: 14rem;
+    box-shadow: rgb(14, 10, 31) 0px 7.1166px 0px 0px;
 }
 </style>

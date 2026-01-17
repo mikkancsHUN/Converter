@@ -1,0 +1,138 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  --clr-background: linear-gradient(90deg, #0f0f0f, #232d3f);
+  --clr-card: rgba(0, 0, 0, 0.3);
+  --clr-text: white;
+  --clr-inputfield: #00302d;
+  --clr-inputfield-hover: #00524b;
+  --clr-span: #008170;
+  --clr-span-hover: #00463c;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.card {
+  background-color: var(--clr-card);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  color: var(--clr-text);
+}
+
+span {
+  color: var(--clr-span);
+}
+
+input {
+  border-radius: 50px;
+  text-align: center;
+  font-size: 1em;
+  margin: 1em;
+  height: 3.4em;
+  background-color: var(--clr-inputfield);
+  color: rgb(240, 240, 240);
+  outline: none;
+  border: none;
+  transition: 0.3s;
+}
+
+input:hover {
+  background-color: var(--clr-inputfield-hover);
+}
+
+button {
+  background-color: var(--clr-span);
+  border: 2px solid black;
+  color: white;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  border-radius: 5px;
+  font-size: 1em;
+  height: 3.4rem;
+  border: 2px solid black;
+  box-shadow: 0 8px rgb(14, 10, 31);
+  user-select: none;
+  transition-duration: 0.1s;
+}
+
+button:hover {
+  background-color: var(--clr-span-hover);
+}
+
+button:active {
+  box-shadow: 0 5px rgb(14, 10, 31);
+  transform: translateY(4px);
+}
+
+.task-info {
+  padding-top: 1em;
+  color: #545768;
+}
+
+@media screen and (max-width: 1090px) {
+  .percentage__box-item {
+    margin: 0em;
+    flex-direction: column;
+    padding-bottom: 2em;
+  }
+
+  .border-bot::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--clr-inputfield);
+    bottom: 0;
+    border-radius: 50%;
+    transform: translateY(200%);
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .calculator__box {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .title-header {
+    padding-top: 1em;
+    padding-left: 1em;
+  }
+
+  .converter {
+    padding: 0;
+    padding-bottom: 2em;
+  }
+}

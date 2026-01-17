@@ -124,6 +124,18 @@ export default defineComponent({
     justify-content: space-between;
 }
 
+/* Number input mezőkben lévő nyilak eltüntetése */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox számára */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .task-info {
     margin: 1rem 0 0 1rem;
     font-size: 0.9rem;
